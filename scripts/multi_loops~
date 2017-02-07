@@ -1,0 +1,20 @@
+disp "enter l, m and n:\n"
+num l m n
+inp l
+inp m
+inp n
+num i j k
+i=0
+while(i<l)
+ {
+   while(j<m)
+    {
+      while(k<n) 
+       {
+         disp "\ni=" i " j=" j " k=" k  
+         k=k+1
+       }
+      j=j+1
+    }
+   i=i+1
+ }   

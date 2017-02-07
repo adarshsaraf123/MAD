@@ -1,0 +1,78 @@
+# to implement the gaussian elimination method for solving a system of linear equations using pivoting, assuming that the solution exist
+
+disp "\nEnter the number of variables in the system of equations:\n"
+num m n
+inp m
+mat a[m][m+1] swap_temp[1][m+1]
+disp "\nEnter the augumented matrix (A|b) for the system of equations:\n"
+inp a
+#disp a
+num j i divider multiplier
+i=1
+num large
+while(i<=m)
+ {
+   #to implement pivoting
+   
+   j=i+1
+   large=i
+   while(j<=m)
+    {
+      if(a[large][i]==0) #if this happens we want to avoid this value and  change it to the next value
+        large=j
+      else if(a[j][i]!=0)
+        if(a[j][i]>a[large][i])
+          large=j
+      j=j+1
+    }
+   if(a[large][i]==0)
+    {
+      disp "\nThe system of equations does not have a unique solution!!!\n\n\n"
+      exit
+    }
+    
+   #disp large
+   swap_temp=a[large]
+   a[large]=a[i]
+   a[i]=swap_temp 
+   
+   #end of pivoting
+   
+   divider=a[i][i]
+   a[i]=a[i]/divider
+   #disp a[i]
+   j=i+1
+   while(j<=m)
+    {
+      multiplier=a[j][i]
+      #disp "\n" j " " i " " a[j][i] " " multiplier "\n"
+      a[j]=a[j]-(a[i]*multiplier)
+     #disp a[j]
+      j=j+1
+    }
+   #disp a
+   i=i+1
+ }
+mat sol[1][m]
+num sum temp1 temp2
+n=m+1
+temp1=a[m][n]
+sol[1][m]=temp1
+i=m-1
+while(i>=1)
+ {
+   sum=0
+   j=i+1
+   while(j<=m)
+    {
+      temp1=(a[i][j]*sol[1][j])
+      sum=sum+temp1
+      j=j+1
+    }
+   n=m+1 
+   temp1=(a[i][n]-sum)
+   sol[1][i]=temp1
+   i=i-1
+ }
+disp "\n\nThe solution is:\n" sol
+

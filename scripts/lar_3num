@@ -1,0 +1,30 @@
+num n1 n2 n3
+disp "\nenter first:\n"
+inp n1
+disp "\nenter second:\n"
+inp n2
+disp "\nenter third:\n"
+inp n3
+if (n1>n2)
+ {
+   if(n1>n3)
+    {
+      disp n1 " is greater\n"
+      disp "\n\nhigh"
+    }
+   else if(n3>n1)
+    {
+      disp n3 " is greater\n"
+    }
+ }
+else
+ {
+   if(n2>n3)
+     disp n2 " is greater\n"
+   else if(n3>n2)
+     disp n3 " is greater\n"
+ }
+  
+
+
+

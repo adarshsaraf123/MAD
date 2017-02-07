@@ -1,0 +1,69 @@
+num m n
+
+disp "Enter the number of elements in the set\n"
+inp n
+disp "Enter the number of subsets\n"
+inp m
+
+mat a[m][n]
+disp "Enter the subsets matrix:\n"
+inp a
+
+mat sets[m][1]
+num incomplete i j small row cnt_one
+incomplete=(i=1)
+
+while(incomplete)
+ {
+   mat b[m][n]
+   b=a
+   while(b)
+    {
+      small=n
+      row=1
+      i=1
+      while(i<=m)
+       {
+         disp "small=" small
+         disp "\n"
+         cnt_one=0
+         j=1
+         while(j<=n)
+          {
+            disp "b[i][j]=" b[i][j]
+            if(b[i][j]==1)
+             {
+               cnt_one=cnt_one+1
+               disp "cnt_one=" cnt_one
+             }
+            j=j+1
+          }
+         if(cnt_one<small)
+          {
+            small=cnt_one
+            row=i
+          }
+         i=i+1
+       }  
+      j=1
+      while(j<=n)
+       {
+         if(b[row][j]==1)
+          {
+            i=1
+            while(i<=m)
+             {
+               if(i<row|i>row)
+                 if(b[i][j]==1)
+                   del b[i]
+             }
+            del b[][j]
+          }
+       }
+      disp "b=\n" b
+    }
+   del b
+ } 
+
+
+

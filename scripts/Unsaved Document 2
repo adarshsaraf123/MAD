@@ -1,0 +1,22 @@
+#to implement the simplex algorithm
+
+num n m # n for variables, m for equations
+
+disp "Enter the number of variables in the system:\n"
+inp n
+
+disp "Enter the number of (in)equations in the system:\n"
+inp m
+
+mat a[m+2][m+n+2]
+
+disp "Enter  a1, a2, ... , a" n " in the objective equation as z+a1x1+a2x2+...+anxn=0:\n"
+inp a[2][2:n+1]
+
+disp "\nEnter the coefficients of the variables in the (in)equations:\n"
+inp a[3:m+2][2:n+1]
+
+disp "\nEnter the right hand side of each (in)equation:\n"
+inp a[3:m+2][m+n+2]
+
+disp a

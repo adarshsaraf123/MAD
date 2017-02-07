@@ -1,0 +1,19 @@
+num m1 n1 m2 n2
+disp "\nenter row size of first matrix:\n"
+inp m1
+disp "\nenter col size of first matrix:\n"
+inp n1
+disp "\nenter row size of second matrix:\n"
+inp m2
+disp "\nenter col size of second matrix:\n"
+inp n2
+mat a[m1][n1] b[m2][n2]
+disp "\nenter first matrix:\n"
+inp a
+disp "\nenter second matrix:\n"
+inp b
+disp "\nthe sum is\n" a+b
+
+
+
+

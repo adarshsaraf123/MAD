@@ -1,0 +1,6 @@
+num else1
+inp else1 
+if (else1>0)
+  disp "Hurray"
+else1=3
+disp else1

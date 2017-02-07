@@ -1,0 +1,61 @@
+# to find the reduced echelon form of a given matrix
+
+num m n
+disp "Enter the size of the matrix(m*n):\n"
+inp m
+inp n
+
+mat a[m][n] b[m][n] swap_temp[1][n]
+
+disp "\nEnter the matrix:\n"
+inp b
+a=b
+num j i divider multiplier
+i=1
+num large
+while(i<=m)
+ {
+   #to implement pivoting
+   
+   j=i+1
+   large=i
+   while(j<=m)
+    {
+      if(a[large][i]==0) #if this happens we want to avoid this value and  change it to the next value
+        large=j
+      else if(a[j][i]!=0)
+        if(a[j][i]>a[large][i])
+          large=j
+      j=j+1
+    }
+   if(a[large][i]!=0)
+    {
+      #disp large
+      swap_temp=a[large]
+      a[large]=a[i]
+      a[i]=swap_temp 
+   
+      #end of pivoting
+   
+      divider=a[i][i]
+      a[i]=a[i]/divider
+      #disp a[i]
+      j=1
+      while(j<=m)
+       {
+         if(j!=i)
+          {
+            multiplier=a[j][i]
+            #disp "\n" j " " i " " a[j][i] " " multiplier "\n"
+            a[j]=a[j]-(a[i]*multiplier)
+            #disp a[j]
+          }
+         j=j+1
+       }
+      #disp a
+    }
+   i=i+1
+ }
+ 
+disp "\nThe reduced echelon form of the given matrix is:\n"
+disp a

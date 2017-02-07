@@ -1,0 +1,12 @@
+a[i]=a[i]/divider
+   j=i+1
+   while(j<=n-1)
+    {
+      multiplier=a[j][j]
+      disp "\n multiplier=" multiplier
+      a[j]=a[j]-(a[i]*multiplier)
+      j=j+1
+    }
+   disp a
+   
+   disp "\n divider=" divider
