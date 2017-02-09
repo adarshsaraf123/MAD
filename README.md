@@ -30,10 +30,22 @@ The logic used for each of the funtion used in the program is given where the fu
 
 With this basic knowledge in mind, anyone who wants to understand the code can now read through the files, and understand how the entire program had been implemented. But before ventures out in this, I would suggest that he first use MAD for sometime to get a basic idea of what it does, whence he will be able to follow the line of execution in the program.
 
-## Usage
-Using MAD is just like using any other programming language. The user can type the program in a file and then pass the file as a command line argument to MAD. MAD then takes over producing the required output. Also, if no file has been passed to MAD then running MAD causes the MAD shell to start, which as mentioned earlier can be used for executing all the commands supported by MAD except the conditionals and the loops. 
+## Compilation
+Currently, we have only tested MAD on Linux distributions. For compiling MAD just download this project and at the root directory run the following command:
+```
+make MAD
+```
+This utilizes the provided makefile for creating the target `MAD`.
+You can now use MAD as described below. 
 
-The shell is actually of immense use, since it's so much like a DEBUGGER. Suppose one has typed a program, and is encountering some difficulties in the execution. He can now run the shell and run the very same program line-by-line in the shell, and see the effect of each line. In this way he can understand where he has actually gone wrong in the programming, and thereafter make the necessary corrections in the program. 
+## Usage
+Using MAD is just like using any other programming language. The user can type the program in a file and then pass the file as a command line argument to MAD. For example running the following
+```
+MAD simplex
+```
+would cause MAD to execute the script provided in the file `simplex`.
+
+Further, if no file has been passed to MAD then running MAD causes the MAD shell to start, which as mentioned earlier can be used for executing all the commands supported by MAD except the conditionals and the loops. The shell is actually of immense use, since it's so much like a DEBUGGER. Suppose one has typed a program, and is encountering some difficulties in the execution. He can now run the shell and run the very same program line-by-line in the shell, and see the effect of each line. In this way he can understand where he has actually gone wrong in the programming, and thereafter make the necessary corrections in the program. 
 
 Let us now look at the keywords and operators available in MAD, and see how we can use them for writing programs.
 
@@ -116,7 +128,7 @@ disp "\nthe sum is\n" a+b
 ```
 Further examples can be found in the `scripts` folder in the root of this project.
 
-## FURTHER IMPROVEMENTS POSSIBLE:
+## Further Improvements:
 
  1. The first improvement that I would like to make to MAD is add a very robust error-detection in commands and programs to it. 
      As of now, there is only minimal error-checking in it, just enough to ensure a smooth running of the program without a 
