@@ -94,7 +94,7 @@ Let us now look at the keywords and operators available in MAD, and see how we c
 ## An Example
 A small program to illustrate the use of MAD is as follows:
 ```
-# program to add to matrices  
+# program to add two matrices  
 num m1 n1 m2 n2
 disp "\nenter row size of first matrix:\n"
 inp m1
