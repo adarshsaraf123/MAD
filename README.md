@@ -94,36 +94,21 @@ Let us now look at the keywords and operators available in MAD, and see how we c
 ## An Example
 A small program to illustrate the use of MAD is as follows:
 ```
-		# program to add to matrices  
-		
-		num m1 n1 m2 n2
-		
-		disp "\nenter row size of first matrix:\n"
-		
-		inp m1
-		
-		disp "\nenter col size of first matrix:\n"
-		
-		inp n1
-		
-		disp "\nenter row size of second matrix:\n"
-		
-		inp m2
-		
-		disp "\nenter col size of second matrix:\n"
-		
-		inp n2
-		
-		mat a[m1][n1] b[m2][n2]
-		
-		disp "\nenter first matrix:\n"
-		
-		inp a
-		
-		disp "\nenter second matrix:\n"
-		
-		inp b
-		
+# program to add to matrices  
+num m1 n1 m2 n2
+disp "\nenter row size of first matrix:\n"
+inp m1
+disp "\nenter col size of first matrix:\n"
+inp n1
+disp "\nenter row size of second matrix:\n"
+inp m2
+disp "\nenter col size of second matrix:\n"
+inp n2
+mat a[m1][n1] b[m2][n2]
+disp "\nenter first matrix:\n"
+inp a
+disp "\nenter second matrix:\n"
+inp b
 disp "\nthe sum is\n" a+b
 ```
 Further examples can be found in the `scripts` folder in the root of this project.
